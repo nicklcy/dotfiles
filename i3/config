@@ -332,7 +332,7 @@ popup_during_fullscreen smart
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
-exec_always feh --bg-fill /home/lcy/.local/share/wallpapers/Nord-Wallpapers/wallpapers/10.png
+exec_always feh --bg-fill $HOME/.local/share/wallpapers/Nord-Wallpapers/wallpapers/10.png
 exec_always --no-startup-id i3-auto-layout
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 exec_always --no-startup-id i3-auto-layout
