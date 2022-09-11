@@ -216,6 +216,7 @@ mode "start_my_apps" {
 	bindsym s exec --no-startup-id systemsettings5; mode "default"
 	bindsym m exec --no-startup-id netease-cloud-music; mode "default"
 	bindsym i exec --no-startup-id fcitx; mode "default"
+	bindsym b exec --no-startup-id systemsettings5 kcm_bluetooth; mode "default"
 	bindsym Return mode "default"
 	bindsym Escape mode "default"
 }
@@ -324,7 +325,7 @@ bindsym $mod+q kill
 #####################################################################################################################
 
 bindsym Print exec spectacle
-
+bindsym $mod+Shift+p exec --no-startup-id spectacle -f -b -o $HOME/Pictures/$(date +Screenshot_%Y%m%d_%H%M%S.jpg)
 
 #####################################################################################################################
 #################                          bar toggle                                               #################
