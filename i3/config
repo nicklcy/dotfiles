@@ -66,10 +66,10 @@ bindsym $mod+Shift+q kill
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # start rofi full
-bindsym --release $mod+d exec --no-startup-id $HOME/.config/rofi/launchers/type-1/launcher.sh drun
-bindsym --release $mod+u exec --no-startup-id $HOME/.config/rofi/launchers/type-1/launcher.sh run
-bindsym --release $mod+w exec --no-startup-id $HOME/.config/rofi/launchers/type-1/launcher.sh window
-bindsym --release $mod+Shift+f exec --no-startup-id $HOME/.config/rofi/launchers/type-1/launcher.sh filebrowser
+bindsym $mod+d exec --no-startup-id LC_ALL=en_US.UTF-8 ~/.config/rofi/launchers/type-1/launcher.sh drun
+bindsym $mod+u exec --no-startup-id LC_ALL=en_US.UTF-8 ~/.config/rofi/launchers/type-1/launcher.sh run
+bindsym $mod+w exec --no-startup-id LC_ALL=en_US.UTF-8 ~/.config/rofi/launchers/type-1/launcher.sh window
+bindsym $mod+Shift+f exec --no-startup-id LC_ALL=en_US.UTF-8 ~/.config/rofi/launchers/type-1/launcher.sh filebrowser
 
 # change focus
 bindsym $mod+h focus left
@@ -156,6 +156,8 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
+bindsym $mod+o exec --no-startup-id locale &>> /home/lcy/locale_res
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -199,7 +201,7 @@ bindsym $mod+r mode "resize"
 bar {
 	font pango: DejaVu Sans Mono, FontAwesome 10
 	# position bottom
-	status_command i3status-rs ~/.config/i3/config.toml
+	status_command /usr/bin/i3status-rs ~/.config/i3/config.toml
 	colors {
 		separator #666666
 		background #222222
@@ -324,8 +326,8 @@ bindsym $mod+q kill
 #################                          screenshots                                              #################
 #####################################################################################################################
 
-bindsym Print exec spectacle
-bindsym $mod+Shift+p exec --no-startup-id spectacle -f -b -o $HOME/Pictures/$(date +Screenshot_%Y%m%d_%H%M%S.jpg)
+bindsym Print exec flameshot gui
+bindsym $mod+Shift+p exec --no-startup-id flameshot full -c -p $HOME/Pictures/$(date +Screenshot_%Y%m%d_%H%M%S.jpg)
 
 #####################################################################################################################
 #################                          bar toggle                                               #################
