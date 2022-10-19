@@ -44,7 +44,7 @@ require('packer').startup(function()
 	use {
 		'neovim/nvim-lspconfig',
 		'hrsh7th/nvim-cmp',
-		'folke/lua-dev.nvim',
+		'folke/neodev.nvim',
 		'hrsh7th/cmp-nvim-lsp'
 	}
 
