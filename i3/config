@@ -225,11 +225,17 @@ mode "start_my_apps" {
 
 bindsym $mod+p mode "start_my_apps"
 
-# # start firefox
-# bindsym --release $mod+Shift+f exec --no-startup-id firefox
-# 
-# # start system settings
-# bindsym --relaese $mod+Shift+g exec --no-startup-id systemsettings5
+######################################
+### Set automatic floating windows ###
+######################################
+
+# vlc
+for_window [class="vlc"] floating enable
+# wemeet
+for_window [class="wemeetapp"] floating enable
+# my programs imshow
+# for_window [class="Main"] floating enable
+assign [class="Main"] $ws1
 
 #####################################################################################################################
 #################                          i3 gaps next                                             #################
