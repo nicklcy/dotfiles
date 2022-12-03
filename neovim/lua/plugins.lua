@@ -11,26 +11,13 @@ require('packer').startup(function()
 
 	use 'shaunsingh/nord.nvim'
 
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = {
-			'kyazdani42/nvim-web-devicons', opt = true
-		}
-	}
+	use 'kyazdani42/nvim-web-devicons'
 
-	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = {
-			'kyazdani42/nvim-web-devicons', -- optional, for file icon
-		}
-	}
+	use 'nvim-lualine/lualine.nvim'
 
-	use {
-		'akinsho/bufferline.nvim',
-		requires = {
-			'kyazdani42/nvim-web-devicons'
-		}
-	}
+	use 'kyazdani42/nvim-tree.lua'
+
+	use 'akinsho/bufferline.nvim'
 
 	use {
 		'numToStr/Comment.nvim',
@@ -38,8 +25,13 @@ require('packer').startup(function()
 
 	use {
 		'phaazon/hop.nvim',
-		-- branch = 'v1', -- optional but strongly recommended
+		branch = 'v2', -- optional but strongly recommended
 	}
+
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v<CurrentMajor>.*"
+	})
 
 	use {
 		'neovim/nvim-lspconfig',
@@ -62,13 +54,17 @@ require('packer').startup(function()
 	use {
 		"jlanzarotta/bufexplorer"
 	}
+
+	use {
+		"bfredl/nvim-ipy"
+	}
 end)
 
-plugin_files = {'treesitter', 'nord', 'lualine', 'nvim-tree',
+local plugin_files = {'treesitter', 'nord', 'lualine', 'nvim-tree',
 'bufferline', 'Comment', 'hop', 'lspconfig', 'cmp',
 'toggleterm'}
 for i = 1, #plugin_files do
-	plugin = plugin_files[i]
+	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)
 	require('plugin_config/'..plugin)
 end

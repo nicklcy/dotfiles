@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  LuaSnip = {
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   bufexplorer = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/bufexplorer",
@@ -119,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-ipy"] = {
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-ipy",
+    url = "https://github.com/bfredl/nvim-ipy"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -135,9 +145,8 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/lcy/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
