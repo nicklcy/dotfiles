@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
   ["hop.nvim"] = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/hop.nvim",
@@ -123,11 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-ipy"] = {
-    loaded = true,
-    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/nvim-ipy",
-    url = "https://github.com/bfredl/nvim-ipy"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -173,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 

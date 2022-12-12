@@ -36,8 +36,9 @@ require('packer').startup(function()
 	use {
 		'neovim/nvim-lspconfig',
 		'hrsh7th/nvim-cmp',
-		'folke/neodev.nvim',
-		'hrsh7th/cmp-nvim-lsp'
+		'hrsh7th/cmp-nvim-lsp',
+		'hrsh7th/cmp-nvim-lsp-signature-help',
+		'folke/neodev.nvim'
 	}
 
 	use {
@@ -56,13 +57,13 @@ require('packer').startup(function()
 	}
 
 	use {
-		"bfredl/nvim-ipy"
+		'lervag/vimtex'
 	}
 end)
 
 local plugin_files = {'treesitter', 'nord', 'lualine', 'nvim-tree',
 'bufferline', 'Comment', 'hop', 'lspconfig', 'cmp',
-'toggleterm'}
+'toggleterm', 'vimtex'}
 for i = 1, #plugin_files do
 	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)
