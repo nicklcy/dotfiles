@@ -28,18 +28,24 @@ require('packer').startup(function()
 		branch = 'v2', -- optional but strongly recommended
 	}
 
-	use({
-		"L3MON4D3/LuaSnip",
-		tag = "v<CurrentMajor>.*"
-	})
-
 	use {
 		'neovim/nvim-lspconfig',
 		'hrsh7th/nvim-cmp',
+		'hrsh7th/cmp-nvim-lua',
 		'hrsh7th/cmp-nvim-lsp',
 		'hrsh7th/cmp-nvim-lsp-signature-help',
-		'folke/neodev.nvim'
+		'folke/neodev.nvim',
+		'onsails/lspkind.nvim'
 	}
+
+	use({
+		"L3MON4D3/LuaSnip",
+		-- tag = "v<CurrentMajor>.*",
+		requires = {
+			'rafamadriz/friendly-snippets',
+			'saadparwaiz1/cmp_luasnip'
+		}
+	})
 
 	use {
 		'nvim-telescope/telescope.nvim',
@@ -62,8 +68,8 @@ require('packer').startup(function()
 end)
 
 local plugin_files = {'treesitter', 'nord', 'lualine', 'nvim-tree',
-'bufferline', 'Comment', 'hop', 'lspconfig', 'cmp',
-'toggleterm', 'vimtex'}
+	'bufferline', 'Comment', 'hop', 'lspconfig', 'cmp',
+	'toggleterm', 'vimtex', 'luasnip'}
 for i = 1, #plugin_files do
 	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)

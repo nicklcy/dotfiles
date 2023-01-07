@@ -360,14 +360,15 @@ popup_during_fullscreen smart
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 # exec_always --no-startup-id nitrogen --restore
 exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
-# exec_always feh --bg-fill $HOME/.local/share/wallpapers/Nord-Wallpapers/wallpapers/10.png
-exec_always feh --bg-fill $HOME/.local/share/wallpapers/costal-sunset.jpg
+exec_always feh --bg-fill $HOME/.local/share/wallpapers/Nord-Wallpapers/wallpapers/10.png
+# exec_always feh --bg-fill $HOME/.local/share/wallpapers/costal-sunset.jpg
 exec_always --no-startup-id i3-auto-layout
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
 exec_always --no-startup-id i3-auto-layout
 exec_always --no-startup-id devilspie
 exec_always --no-startup-id dunst -config $HOME/.config/dunst/base16-nord.dunstrc
 #note: my custom dunst configuration can be found here https://pastebin.com/P3i1N8ub curl it to $HOME/.config/dunst/base16-nord.dunstrc
+exec_always --no-startup-id conky -c "$HOME/.conky/Mimosa_DBlue/Mimosa.conf"
 
 bindsym Mod4+Mod1+Shift+minus exec \
 		i3-msg "gaps outer current minus 5" && i3-msg "gaps inner current minus 5"
