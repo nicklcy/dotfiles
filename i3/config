@@ -51,7 +51,7 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id konsole
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -204,12 +204,12 @@ bar {
 	status_command /usr/bin/i3status-rs ~/.config/i3/config.toml
 	colors {
 		separator #666666
-		background #222222
+		background #2E3440
 		statusline #dddddd
-		focused_workspace #0088CC #0088CC #ffffff
-		active_workspace #333333 #333333 #ffffff
-		inactive_workspace #333333 #333333 #888888
-		urgent_workspace #2f343a #900000 #ffffff
+		focused_workspace #5E81AC #5E81AC #ffffff
+		active_workspace #3B4252 #3B4252 #888888
+		inactive_workspace #3B4252 #3B4252 #888888
+		urgent_workspace #3B4252 #BF616A #ffffff
 	}
 }
 
@@ -410,12 +410,12 @@ set $base0F #fcc09e
 # Window color settings
 # class                 border  backgr. text    indicator
 # client.focused          #d00b0b #d00b0b #ffffff #ff5151
-client.focused          ##13359 #6d27e6 #ffffff #ff5151
+client.focused          ##13359 #6d27e6 #ffffff #6d27e6
 client.unfocused        #2e3440 #2e3440 #888888 #2e3440
 client.focused_inactive #2e3440 #2e3440 #888888 #2e3440
 client.placeholder      #2e3440 #2e3440 #888888 #2e3440
 client.urgent           #900000 #900000 #ffffff #900000
 
-client.background       #242424
+client.background       #2e3440
 
 ##STOP THEMING WM
