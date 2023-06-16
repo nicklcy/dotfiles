@@ -149,6 +149,11 @@ _G.packer_plugins = {
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/lcy/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/lcy/.local/share/nvim/site/pack/packer/start/telescope.nvim",

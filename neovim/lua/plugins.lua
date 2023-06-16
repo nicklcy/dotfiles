@@ -69,16 +69,18 @@ require('packer').startup(function()
 	use {
 		'lervag/vimtex'
 	}
+
+	use 'lambdalisue/suda.vim'
 end)
 
-local plugin_files = {'nord', 'lualine', 'nvim-tree',
+local plugin_files = { 'nord', 'lualine', 'nvim-tree',
 	'bufferline', 'Comment', 'hop', 'toggleterm',
 	'treesitter',
 	--'lspconfig', 'cmp',
 	'coc-nvim',
-	'vimtex', 'luasnip'}
+	'vimtex', 'luasnip' }
 for i = 1, #plugin_files do
 	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)
-	require('plugin_config/'..plugin)
+	require('plugin_config/' .. plugin)
 end
