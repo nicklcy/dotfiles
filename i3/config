@@ -363,7 +363,7 @@ exec_always --no-startup-id ~/.config/i3/scripts/mouse.sh
 exec_always feh --bg-fill $HOME/.local/share/wallpapers/Nord-Wallpapers/wallpapers/10.png
 # exec_always feh --bg-fill $HOME/.local/share/wallpapers/costal-sunset.jpg
 exec_always --no-startup-id i3-auto-layout
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
+exec_always --no-startup-id $HOME/.config/polybar/forest/launch.sh
 exec_always --no-startup-id i3-auto-layout
 exec_always --no-startup-id devilspie
 exec_always --no-startup-id dunst -config $HOME/.config/dunst/base16-nord.dunstrc

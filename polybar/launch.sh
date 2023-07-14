@@ -10,14 +10,39 @@ launch_bar() {
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-	# Launch the bar
-	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
-		polybar -q top -c "$dir/$style/config.ini" &
-		polybar -q bottom -c "$dir/$style/config.ini" &
-	elif [[ "$style" == "pwidgets" ]]; then
-		bash "$dir"/pwidgets/launch.sh --main
+	# # Launch the bar
+	# if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+	# 	polybar -q top -c "$dir/$style/config.ini" &
+	# 	polybar -q bottom -c "$dir/$style/config.ini" &
+	# elif [[ "$style" == "pwidgets" ]]; then
+	# 	bash "$dir"/pwidgets/launch.sh --main
+	# else
+	# 	polybar -q main -c "$dir/$style/config.ini" &	
+	# fi
+
+	# launch polybar in multiple screens (https://github.com/polybar/polybar/issues/763)
+	if type "xrandr"; then
+		for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+			echo MONITOR = $m
+			if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+				polybar -q top -c "$dir/$style/config.ini" &
+				polybar -q bottom -c "$dir/$style/config.ini" &
+			elif [[ "$style" == "pwidgets" ]]; then
+				bash "$dir"/pwidgets/launch.sh --main
+			else
+				MONITOR=$m polybar -q main -c "$dir/$style/config.ini" &	
+			fi
+		done
 	else
-		polybar -q main -c "$dir/$style/config.ini" &	
+		# Launch the bar
+		if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
+			polybar -q top -c "$dir/$style/config.ini" &
+			polybar -q bottom -c "$dir/$style/config.ini" &
+		elif [[ "$style" == "pwidgets" ]]; then
+			bash "$dir"/pwidgets/launch.sh --main
+		else
+			polybar -q main -c "$dir/$style/config.ini" &	
+		fi
 	fi
 }
 
