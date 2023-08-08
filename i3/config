@@ -418,4 +418,8 @@ client.urgent           #900000 #900000 #ffffff #900000
 
 client.background       #2e3440
 
+# for picom rounded-corners
+# https://www.reddit.com/r/i3wm/comments/tbsavp/comment/i0aky05/?utm_source=share&utm_medium=web2x&context=3
+default_border pixel 4
+
 ##STOP THEMING WM
