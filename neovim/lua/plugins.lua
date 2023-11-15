@@ -40,15 +40,15 @@ require('packer').startup(function()
 	-- }
 
 	use({
-		'neoclide/coc.nvim', branch = 'release'
+		'neoclide/coc.nvim', branch = 'release',
+		requires = {
+			'rafamadriz/friendly-snippets'
+		}
 	})
 
 	use({
 		"L3MON4D3/LuaSnip",
 		-- tag = "v<CurrentMajor>.*",
-		requires = {
-			'rafamadriz/friendly-snippets'
-		}
 	})
 
 	use {
@@ -78,7 +78,7 @@ local plugin_files = { 'nord', 'lualine', 'nvim-tree',
 	'treesitter',
 	--'lspconfig', 'cmp',
 	'coc-nvim',
-	'vimtex', 'luasnip' }
+	'vimtex' }
 for i = 1, #plugin_files do
 	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)
