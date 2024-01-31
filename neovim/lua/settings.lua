@@ -6,8 +6,8 @@ local indent = 2
 opt.tabstop = indent
 opt.softtabstop = indent
 opt.shiftwidth = indent
--- opt.smarttab = true
--- opt.expandtab = true
+opt.smarttab = true
+opt.expandtab = true
 
 opt.list = true
 opt.listchars = "trail:$,tab:>-"
