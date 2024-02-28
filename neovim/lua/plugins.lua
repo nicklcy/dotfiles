@@ -70,15 +70,19 @@ require('packer').startup(function()
 		'lervag/vimtex'
 	}
 
+  use {
+    'Vonr/align.nvim',
+    branch = "v2"
+  }
+
 	use 'lambdalisue/suda.vim'
 end)
 
 local plugin_files = { 'nord', 'lualine', 'nvim-tree',
 	'bufferline', 'Comment', 'hop', 'toggleterm',
-	'treesitter',
+	'treesitter', 'vimtex', 'align',
 	--'lspconfig', 'cmp',
-	'coc-nvim',
-	'vimtex' }
+	'coc-nvim' }
 for i = 1, #plugin_files do
 	local plugin = plugin_files[i]
 	-- print('Load plugin config file: '..plugin)
