@@ -26,7 +26,7 @@
     horizontal_padding = 10
     separator_color = auto
     startup_notification = false
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = rofi -theme /home/lcy/.config/rofi/launchers/type-1/style-9.rasi -dmenu -p dunst:
     browser = /usr/bin/firefox -new-tab
     icon_position = left
     icon_folders = /usr/share/icons/breeze/apps/48/:/usr/share/icons/breeze/actions/48/:/usr/share/icons/breeze/places/48/:/usr/share/icons/breeze/status/48/
@@ -37,7 +37,7 @@
     close = ctrl+space
     close_all = ctrl+shift+space
     history = ctrl+shift+h
-    context = ctrl+shift+period
+    context = ctrl+shift+c
 
 [nord_low]
     msg_urgency = low
@@ -53,3 +53,4 @@
     msg_urgency = critical
     background = "#2e3440"
     foreground = "#eceff4"
+
