@@ -33,6 +33,8 @@
     frame_color = "#81a1c1"
     separator_color = auto
 
+    mouse_right_click = do_action, close_current
+
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
