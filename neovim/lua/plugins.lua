@@ -13,44 +13,52 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 plugins = {
-	{
-		'nvim-treesitter/nvim-treesitter',
-		'nvim-treesitter/playground',
-	},
-	'shaunsingh/nord.nvim',
-	'kyazdani42/nvim-web-devicons',
-	'nvim-lualine/lualine.nvim',
-	'kyazdani42/nvim-tree.lua',
-	'akinsho/bufferline.nvim',
-	'numToStr/Comment.nvim',
-	{ 'phaazon/hop.nvim', branch = 'v2' },
-  { 'neoclide/coc.nvim', branch = 'release',
-		dependencies = {
-			'rafamadriz/friendly-snippets'
-		}
+  {
+    'nvim-treesitter/nvim-treesitter',
+    'nvim-treesitter/playground',
   },
-	"L3MON4D3/LuaSnip",
-	{
-		'nvim-telescope/telescope.nvim',
-		dependencies = {
-			'nvim-lua/plenary.nvim'
-		}
-	},
-	"akinsho/toggleterm.nvim",
-	"jlanzarotta/bufexplorer",
-	'lervag/vimtex',
+  'shaunsingh/nord.nvim',
+  'kyazdani42/nvim-web-devicons',
+  'nvim-lualine/lualine.nvim',
+  'kyazdani42/nvim-tree.lua',
+  'akinsho/bufferline.nvim',
+  'numToStr/Comment.nvim',
+  { 'phaazon/hop.nvim', branch = 'v2' },
+  {
+    'neoclide/coc.nvim',
+    branch = 'release',
+    dependencies = {
+      'rafamadriz/friendly-snippets'
+    }
+  },
+  "L3MON4D3/LuaSnip",
+  {
+    'nvim-telescope/telescope.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    }
+  },
+  "akinsho/toggleterm.nvim",
+  "jlanzarotta/bufexplorer",
+  'lervag/vimtex',
   'Vonr/align.nvim',
-	'lambdalisue/suda.vim',
+  'lambdalisue/suda.vim',
+  {
+    'chomosuke/typst-preview.nvim',
+    lazy = false, -- or ft = 'typst'
+    version = '1.*',
+    build = function() require 'typst-preview'.update() end,
+  }
 }
 
 require("lazy").setup(plugins)
 
 local plugin_files = { 'nord', 'lualine', 'nvim-tree',
-	'bufferline', 'Comment', 'hop', 'toggleterm',
-	'treesitter', 'vimtex', 'align',
-	'coc-nvim' }
+  'bufferline', 'Comment', 'hop', 'toggleterm',
+  'treesitter', 'vimtex', 'align',
+  'coc-nvim' }
 for i = 1, #plugin_files do
-	local plugin = plugin_files[i]
-	-- print('Load plugin config file: '..plugin)
-	require('plugin_config/' .. plugin)
+  local plugin = plugin_files[i]
+  -- print('Load plugin config file: '..plugin)
+  require('plugin_config/' .. plugin)
 end
