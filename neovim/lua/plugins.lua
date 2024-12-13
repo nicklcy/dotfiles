@@ -12,53 +12,63 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+local plugins = {
   {
-    'nvim-treesitter/nvim-treesitter',
-    'nvim-treesitter/playground',
-  },
-  'shaunsingh/nord.nvim',
-  'kyazdani42/nvim-web-devicons',
-  'nvim-lualine/lualine.nvim',
-  'kyazdani42/nvim-tree.lua',
-  'akinsho/bufferline.nvim',
-  'numToStr/Comment.nvim',
-  { 'phaazon/hop.nvim', branch = 'v2' },
-  {
-    'neoclide/coc.nvim',
-    branch = 'release',
+    "neoclide/coc.nvim",
+    branch = "release",
     dependencies = {
-      'rafamadriz/friendly-snippets'
+      "rafamadriz/friendly-snippets"
     }
+  },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    "nvim-treesitter/playground",
   },
   "L3MON4D3/LuaSnip",
   {
-    'nvim-telescope/telescope.nvim',
+    "nvim-telescope/telescope.nvim",
     dependencies = {
-      'nvim-lua/plenary.nvim'
+      "nvim-lua/plenary.nvim"
     }
   },
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
+  },
+  "mfussenegger/nvim-dap-python",
+
+  "lervag/vimtex",
+  {
+    "chomosuke/typst-preview.nvim",
+    lazy = false, -- or ft = "typst"
+    version = "1.*",
+    build = function() require "typst-preview".update() end,
+  },
+
+  "lambdalisue/suda.vim",
+
+  "numToStr/Comment.nvim",
+  { "phaazon/hop.nvim", branch = "v2" },
+  "Vonr/align.nvim",
+
+  "shaunsingh/nord.nvim",
+  "kyazdani42/nvim-web-devicons",
+  "nvim-lualine/lualine.nvim",
+  "akinsho/bufferline.nvim",
+
+  "kyazdani42/nvim-tree.lua",
   "akinsho/toggleterm.nvim",
   "jlanzarotta/bufexplorer",
-  'lervag/vimtex',
-  'Vonr/align.nvim',
-  'lambdalisue/suda.vim',
-  {
-    'chomosuke/typst-preview.nvim',
-    lazy = false, -- or ft = 'typst'
-    version = '1.*',
-    build = function() require 'typst-preview'.update() end,
-  }
 }
 
 require("lazy").setup(plugins)
 
-local plugin_files = { 'nord', 'lualine', 'nvim-tree',
-  'bufferline', 'Comment', 'hop', 'toggleterm',
-  'treesitter', 'vimtex', 'align',
-  'coc-nvim' }
+local plugin_files = { "nord", "lualine", "nvim-tree",
+  "bufferline", "Comment", "hop", "toggleterm",
+  "treesitter", "vimtex", "align",
+  "coc-nvim", "dap" }
 for i = 1, #plugin_files do
   local plugin = plugin_files[i]
-  -- print('Load plugin config file: '..plugin)
-  require('plugin_config/' .. plugin)
+  -- print("Load plugin config file: "..plugin)
+  require("plugin_config/" .. plugin)
 end
