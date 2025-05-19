@@ -37,6 +37,10 @@ local plugins = {
   },
   "mfussenegger/nvim-dap-python",
 
+  "numToStr/Comment.nvim",
+  { "phaazon/hop.nvim", branch = "v2" },
+  "Vonr/align.nvim",
+
   "lervag/vimtex",
   {
     "chomosuke/typst-preview.nvim",
@@ -47,10 +51,6 @@ local plugins = {
 
   "lambdalisue/suda.vim",
 
-  "numToStr/Comment.nvim",
-  { "phaazon/hop.nvim", branch = "v2" },
-  "Vonr/align.nvim",
-
   "shaunsingh/nord.nvim",
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
@@ -59,6 +59,17 @@ local plugins = {
   "kyazdani42/nvim-tree.lua",
   "akinsho/toggleterm.nvim",
   "jlanzarotta/bufexplorer",
+  "rcarriga/nvim-notify",
+
+  {
+    "m4xshen/hardtime.nvim",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {
+      disable_mouse = false,
+      max_time = 750,
+    },
+  },
 }
 
 require("lazy").setup(plugins)
@@ -66,7 +77,7 @@ require("lazy").setup(plugins)
 local plugin_files = { "nord", "lualine", "nvim-tree",
   "bufferline", "Comment", "hop", "toggleterm",
   "treesitter", "vimtex", "align",
-  "coc-nvim", "dap" }
+  "coc-nvim", "dap", "notify" }
 for i = 1, #plugin_files do
   local plugin = plugin_files[i]
   -- print("Load plugin config file: "..plugin)
