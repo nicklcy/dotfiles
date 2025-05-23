@@ -2,3 +2,5 @@ set selection-clipboard clipboard
 
 set synctex true
 set synctex-editor-command "nvr --remote-silent %f -c %l"
+
+include catppuccin-mocha

@@ -1,16 +1,20 @@
 # dotfiles
 
-1. neovim
-2. rofi: based on [adi1090x: rofi](https://github.com/adi1090x/rofi)
-3. dunst: based on [sourav2k: dotfiles](https://github.com/sourav2k/dotfiles)
-4. kitty
+Colorscheme: Catppuccin Macchiato / Mocha
 
-### i3
-1. i3 and i3blocks: based on [thefallnn: dotfiles](https://github.com/sourav2k/dotfiles)
-2. polybar: based on [polybar-themes](https://github.com/adi1090x/polybar-themes)
-3. picom
+Applications:
+1. [Neovim](https://github.com/neovim/neovim)
+2. [Rofi](https://github.com/davatorium/rofi): based on [adi1090x/rofi](https://github.com/adi1090x/rofi)
+3. [Dunst](https://github.com/dunst-project/dunst)
+4. [Kitty](https://github.com/kovidgoyal/kitty)
+5. [Yazi](https://github.com/sxyazi/yazi)
+6. [Zathura](https://github.com/pwmt/zathura)
 
-### hyprland
-1. hyprland
-2. hyprpaper
-3. waybar
+Desktop:
+1. [Hyprland](https://github.com/hyprwm/Hyprland)
+2. [Hyprpaper](https://github.com/hyprwm/hyprpaper)
+3. [Waybar](https://github.com/Alexays/Waybar): based on [theCode-Breaker/riverwm](https://github.com/theCode-Breaker/riverwm)
+4. [Swappy](https://github.com/jtheoof/swappy)
+
+Miscellaneous:
+1. Low battery notification (with systemd)

@@ -17,5 +17,5 @@ opt.mouse = 'a'
 opt.completeopt = 'menu,menuone,noselect'
 
 if (not vim.g.vscode) then
-	require('nord').set()
+	vim.cmd.colorscheme "catppuccin-macchiato"
 end

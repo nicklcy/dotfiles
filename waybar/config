@@ -73,11 +73,11 @@
 	},
 	"custom/launcher":{
 		"format": " ",
-		"on-click": "bash $HOME/.config/rofi/scripts/launcher_t1 drun",
+		"on-click": "rofi -theme ~/.config/rofi/launcher.rasi -show drun",
 		"on-click-right": "killall rofi"
 	},
 	"custom/power":{
 		"format": " ",
-		"on-click": "bash $HOME/.config/rofi/scripts/powermenu_t1"
+		"on-click": "bash ~/.config/rofi/powermenu.sh"
 	}
 }

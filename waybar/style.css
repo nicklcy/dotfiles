@@ -1,3 +1,6 @@
+@import "macchiato.css";
+
+
 * {
   border: none;
   border-radius: 10px;
@@ -16,173 +19,97 @@ window#waybar.hidden {
 
 #window {
   margin-top: 6px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px;
   border-radius: 10px;
-  transition: none;
   color: transparent;
   background: transparent;
 }
 
 
-
-
-
-
-
-
-.modules-left {
-  margin-top: 6px;
-  margin-left: 8px;
+.modules-left, .modules-center, .modules-right {
+  margin: 6px 0 0 0;
 }
 
+#custom-launcher,
+#workspaces,
+#cpu,
+#memory,
+#clock,
+#network,
+#backlight,
+#pulseaudio,
+#battery,
+#custom-power,
+#tray {
+  margin: 0 4px;
+  padding: 0 10px;
+  background: @base;
+}
+
+/* Modules left */
 #custom-launcher {
   font-size: 18px;
-  padding-left: 10px;
-  padding-right: 5px;
-  border-radius: 10px;
-  transition: none;
-  color: #89DCEB;
-  background: #161320;
+  padding: 0 5px 0 10px;
+  color: @blue;
 }
 
 #workspaces {
   font-size: 4px;
-  margin-left: 8px;
-  border-radius: 10px;
-  background: #161320;
-  transition: none;
+  padding: 0;
 }
 
 #workspaces button {
-  transition: none;
-  color: #B5E8E0;
+  color: @blue;
   background: transparent;
   font-size: 16px;
-  border-radius: 2px;
 }
 
-#workspaces button.occupied {
-  transition: none;
-  color: #F28FAD;
-  background: transparent;
-  font-size: 4px;
-}
-
-#workspaces button.focused {
-  color: #ABE9B3;
-  border-top: 2px solid #ABE9B3;
-  border-bottom: 2px solid #ABE9B3;
+#workspaces button.active {
+  color: @lavender;
 }
 
 #workspaces button:hover {
-  transition: none;
   box-shadow: inherit;
   text-shadow: inherit;
-  color: #FAE3B0;
-  border-color: #E8A2AF;
-  color: #E8A2AF;
-}
-
-#workspaces button.focused:hover {
-  color: #E8A2AF;
+  color: @pink;
 }
 
 #cpu {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #96CDFB;
+  color: @sky;
 }
 
 #memory {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #DDB6F2;
+  color: @mauve;
 }
 
-
-
-
-
-
-.modules-center {
-  margin-top: 6px;
-}
-
+/* Modules center */
 #clock {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #ABE9B3;
+  color: @teal;
 }
 
-
-
-
-
-
-.modules-right {
-  margin-top: 6px;
-  margin-right: 8px;
-}
-
+/* Modules right */
 #network {
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #bd93f9;
+  color: @sapphire;
 }
 
 #backlight {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #F8BD96;
+  color: @mauve;
 }
 
 #pulseaudio {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #1A1826;
-  background: #FAE3B0;
+  color: @flamingo;
 }
 
 #battery {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #B5E8E0;
+  color: @yellow;
 }
 
 #battery.charging, #battery.plugged {
-  color: #161320;
-  background-color: #B5E8E0;
+  color: @teal;
 }
 
 #battery.critical:not(.charging) {
-  background-color: #B5E8E0;
-  color: #161320;
+  color: @red;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -192,28 +119,13 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: #BF616A;
-    color: #B5E8E0;
+    background-color: @base;
+    color: @text;
   }
 }
 
 #custom-power {
   font-size: 20px;
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 5px;
-  border-radius: 10px;
-  transition: none;
-  color: #161320;
-  background: #F28FAD;
-}
-
-#tray {
-  margin-left: 8px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 10px;
-  transition: none;
-  color: #B5E8E0;
-  background: #161320;
+  padding: 0 5px 0 10px;
+  color: @maroon;
 }

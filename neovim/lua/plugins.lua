@@ -51,7 +51,8 @@ local plugins = {
 
   "lambdalisue/suda.vim",
 
-  "shaunsingh/nord.nvim",
+  -- "shaunsingh/nord.nvim",
+  { "catppuccin/nvim", name = "catppuccin" },
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "akinsho/bufferline.nvim",
@@ -74,7 +75,7 @@ local plugins = {
 
 require("lazy").setup(plugins)
 
-local plugin_files = { "nord", "lualine", "nvim-tree",
+local plugin_files = { "lualine", "nvim-tree",
   "bufferline", "Comment", "hop", "toggleterm",
   "treesitter", "vimtex", "align",
   "coc-nvim", "dap", "notify" }
