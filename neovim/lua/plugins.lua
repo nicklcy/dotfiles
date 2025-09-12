@@ -69,6 +69,10 @@ local plugins = {
     opts = {
       disable_mouse = false,
       max_time = 750,
+      disabled_keys = {
+        ["<Left>"] = false, ["<Right>"] = false,
+        ["<Up>"] = false, ["<Down>"] = false,
+      },
     },
   },
 }
