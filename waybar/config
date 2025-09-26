@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher", "hyprland/workspaces", "cpu", "memory", "custom/media"],
+	"modules-left": ["custom/launcher", "hyprland/workspaces", "niri/workspaces", "cpu", "memory"],
 	"modules-center": ["clock"],
 	"modules-right": ["network", "backlight", "pulseaudio", "battery", "custom/power", "tray"],
 
@@ -17,6 +17,21 @@
 	},
 	"hyprland/workspaces": {
 		"format": "{name}: {icon}",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"active": "",
+			"default": ""
+		},
+		"persistent_workspaces": {
+			"*": 5
+		}
+	},
+	"niri/workspaces": {
+		"format": "{index}: {icon}",
 		"format-icons": {
 			"1": "",
 			"2": "",

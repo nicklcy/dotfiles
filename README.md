@@ -13,8 +13,9 @@ Applications:
 Desktop:
 1. [Hyprland](https://github.com/hyprwm/Hyprland)
 2. [Hyprpaper](https://github.com/hyprwm/hyprpaper)
-3. [Waybar](https://github.com/Alexays/Waybar): based on [theCode-Breaker/riverwm](https://github.com/theCode-Breaker/riverwm)
-4. [Swappy](https://github.com/jtheoof/swappy)
+3. [Niri](https://github.com/YaLTeR/niri)
+4. [Waybar](https://github.com/Alexays/Waybar): based on [theCode-Breaker/riverwm](https://github.com/theCode-Breaker/riverwm)
+5. [Swappy](https://github.com/jtheoof/swappy)
 
 Miscellaneous:
 1. Low battery notification (with systemd)
