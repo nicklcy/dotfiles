@@ -49,6 +49,7 @@ layout {
     proportion 0.33333
     proportion 0.5
     proportion 0.66667
+    proportion 0.8
   }
   default-column-width { proportion 0.5; }
   focus-ring {
@@ -57,8 +58,9 @@ layout {
   border {
     width 4
     // active-color "#ffc87f"
-    active-gradient from="#f00f" to="#0f05" angle=45 in="oklch longer hue"
-    inactive-color "#505050"
+    // inactive-color "#505050"
+    active-gradient from="#f007" to="#0f07" angle=45 in="oklch longer hue"
+    inactive-gradient from="#9997" to="#9997" angle=45
     urgent-color "#9b0000"
   }
   shadow {
@@ -74,7 +76,7 @@ layout {
 spawn-at-startup "waybar"
 
 spawn-at-startup "swww-daemon"
-spawn-at-startup "swww" "img" "~/.local/share/wallpapers/wolp/violin-playing-catppuccin-mocha.png"
+spawn-at-startup "swww" "img" "~/.local/share/wallpapers/wallpaper.png"
 
 spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
@@ -105,9 +107,8 @@ window-rule {
 window-rule {
   match app-id="kitty"
   match app-id="code"
-  opacity 0.95
+  opacity 0.92
   draw-border-with-background true
-  // opacity 0.92
   // draw-border-with-background false
 }
 
